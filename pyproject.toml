@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "testld"
+version = "0.1.0"
+description = ""
+authors = ["dmikutaitsis <denismik02@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.28.1"
+validators = "^0.20.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
