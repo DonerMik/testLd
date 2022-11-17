@@ -31,6 +31,7 @@ async def choice_query(url: str, method: str) -> Union[dict, object]:
 
 
 def get_list_url() -> list:
+    ''''''
     list_strings = input('Введите произвольное количество строк через запятую: ')
     list_urls = [item.strip() for item in list_strings.split(',')]
     return list_urls
