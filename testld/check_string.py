@@ -31,13 +31,14 @@ async def choice_query(url: str, method: str) -> Union[dict, object]:
 
 
 def get_list_url() -> list:
-    ''''''
+    '''Формирует список из полученных строк.'''
     list_strings = input('Введите произвольное количество строк через запятую: ')
     list_urls = [item.strip() for item in list_strings.split(',')]
     return list_urls
 
 
 def first_check_correct(list_input_url: list) -> tuple:
+    '''Проверяет на валидацию список из URL'''
     correct_url = []
     not_urls = []
     for url in list_input_url:
@@ -49,6 +50,10 @@ def first_check_correct(list_input_url: list) -> tuple:
 
 
 async def main(urls: list, response: dict) -> dict:
+    '''
+    Обрабатывает и отправляет запросы к поступившим URL.
+    Если URL не действителен возвращает данную информацию.
+    '''
     tasks = []
     for url in urls:
         if url[-1] != '/':
